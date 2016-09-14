@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, Link} from 'react-router'
+import {Router, Route, Link} from 'react-router';
+import BudgetBar from './budget_bar'
+
 import $ from 'jquery';
 
 export default class Goal extends React.Component {
@@ -18,7 +20,7 @@ export default class Goal extends React.Component {
     goalObj.username = JSON.parse(localStorage.getItem("user")).username;
 
 		let username = JSON.parse(localStorage.getItem("user")).username;
-
+		console.log('goalObj', goalObj);
 		$.ajax({
 			type: 'POST',
 			url: 'http://localhost:3000/api/user/' + username + '/goals',
@@ -49,18 +51,20 @@ export default class Goal extends React.Component {
 					<input placeholder="Goal Description" />
 					<input type="date" placeholder="Goal Date" />
 					<select name="Category">
-						<option value="food">Food</option>
-						<option value="bills">Bills</option>
-						<option value="entertainment">Entertainment</option>
 						<option value="home">Home</option>
 						<option value="car">Car</option>
 						<option value="college">College</option>
+						<option value="yacht">Yacht</option>
+						<option value="diamonds">Diamonds</option>
+						<option value="cat">Cat</option>
 						<option value="other">Other</option>
 					</select>
 
 
 					<button type="submit" className="submit-button">Submit</button>
 				</form>
+				<h2>Budget Progress</h2>
+				<BudgetBar />
 			</div>
     )
   }
