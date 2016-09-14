@@ -38,6 +38,7 @@ ReactDOM.render((
       <Route path="/signup" component={Signup} />
       <Route path="/profile" component={Profile} />
       <Route path="/expense" component={Expense} />
+      <Route path="/goals" component={Goals} />
     </Route>
   </Router>
 ), document.getElementById('content'));
