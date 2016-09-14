@@ -41,8 +41,8 @@ app.get('/api/user/:username/expense', expenseCtrl.getAll);
 app.post('/api/user/:username/expense', expenseCtrl.create);
 
 // goals api
-// app.get('/api/user/:username/goals', goalsCtrl.getGoal);
-// app.post('/api/user/:username/goals', goalsCtrl.makeGoal);
+app.get('/api/user/:username/goals', goalsCtrl.getGoal);
+app.post('/api/user/:username/goals', goalsCtrl.makeGoal);
 
 passport.serializeUser(function(user, done) {
   done(null, user);
