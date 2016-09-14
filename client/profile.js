@@ -25,6 +25,7 @@ export default class Profile extends React.Component {
 
   submit(e) {
     e.preventDefault();
+    console.log(this);
 
     //create object from the values of the inputs
     const amount = e.target.elements[0].value;
@@ -69,9 +70,9 @@ export default class Profile extends React.Component {
   render() {
     this.refreshData();
     return (
-    	<div>
+    	<div id='recurExpense'>
     		<h1>Add Recurring Expenses</h1>
-    		<form onSubmit={this.submit}>
+    		<form onSubmit={this.submit.bind(this)}>
     			<input className="amount" placeholder="Enter amount" />
     			<select name="Category">
             <option value="rent">Rent</option>
