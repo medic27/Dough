@@ -12,6 +12,7 @@ export default class Nav extends React.Component {
           <li><Link to="/signup">Signup</Link></li>
           <li><Link to="/profile">Profile</Link></li>
           <li><Link to="/expense">Expenses</Link></li>
+          <li><Link to="/goals">Goals</Link></li>
         </ul>
       </nav>
     )
