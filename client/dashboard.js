@@ -25,8 +25,10 @@ export default class DashBoard extends React.Component {
           <Pie />
           <TimeChart />
         </div>
-        <Expense/>
-        <Profile/>
+        <div id='expenseInput'>
+          <Expense/>
+          <Profile/>
+        </div>
       </div>
     )
   }
