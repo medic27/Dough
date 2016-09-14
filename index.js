@@ -16,19 +16,19 @@ import Goal from './client/goals'
 
 
 
-ReactDOM.render((
-  <Provider store={store}>
-    <Router history={browserHistory}>
-      <Route path="/" component={theirApp} >
-        <IndexRoute component={Home}/>
-        <Route path="/dashboard" component={DashBoard} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/expense" component={Expense} />
-        <Route path="/goals" component={Goal} />
-
-      </Route>
-    </Router>
-  </Provider>
-), document.getElementById('content'));
+<<<<<<< HEAD
+// ReactDOM.render((
+//   <Provider store={store}>
+//     <Router history={browserHistory}>
+//       <Route path="/" component={theirApp} >
+//         <IndexRoute component={Home}/>
+//         <Route path="/dashboard" component={DashBoard} />
+//         <Route path="/login" component={Login} />
+//         <Route path="/signup" component={Signup} />
+//         <Route path="/profile" component={Profile} />
+//         <Route path="/expense" component={Expense} />
+//       </Route>
+//     </Router>
+//   </Provider>
+// ), document.getElementById('content'));
+>>>>>>> master
