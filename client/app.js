@@ -6,6 +6,8 @@ import Login from './login'
 import Signup from './signup'
 import Profile from './profile'
 import Nav from './nav';
+import Goals from './goals';
+
 
 class App extends React.Component {
   constructor() {

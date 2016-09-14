@@ -11,6 +11,8 @@ import Nav from './client/nav';
 import theirApp from './theirApp';
 import Expense from './client/expense'
 import Home from './client/home'
+import Goal from './client/goals'
+
 
 
 
@@ -24,6 +26,8 @@ ReactDOM.render((
         <Route path="/signup" component={Signup} />
         <Route path="/profile" component={Profile} />
         <Route path="/expense" component={Expense} />
+        <Route path="/goals" component={Goal} />
+
       </Route>
     </Router>
   </Provider>
