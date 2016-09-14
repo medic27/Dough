@@ -22,7 +22,7 @@ function makeGoal(req, res) {
 }
 
 function getGoal(req, res) {
-  Goal.find({
+  Goal.findAll({
     where: {
       username: req.params.username
     }
