@@ -1,0 +1,1 @@
+module.exports = "postgres://apgubbip:e0G61f0aOteJCUOqGBK7H6glT7mHQp5N@elmer.db.elephantsql.com:5432/apgubbip";

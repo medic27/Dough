@@ -11,9 +11,11 @@ export default class Signup extends React.Component {
 	}
 
 	onSubmit(evt) {
-		this.props.changeUserInfo(evt.target.elements[0].value, evt.target.elements[1].value)
-		const self = this;
 		evt.preventDefault();
+		console.log('SUBMITTED SIGNUP EVENT')
+		// this.props.changeUserInfo(evt.target.elements[0].value, evt.target.elements[1].value)
+		const self = this;
+
 
 		const username = evt.target.elements[0].value;
 		const email = evt.target.elements[1].value;
@@ -44,7 +46,7 @@ export default class Signup extends React.Component {
 				    success: function(data, textStatus, jqXHR)
 				    {
 				      localStorage.setItem("user", stringData);
-							const path = `/profile`
+							const path = `/dashboard`
 							browserHistory.push(path)
 				    },
 				    error: function (jqXHR, textStatus, errorThrown)
@@ -56,7 +58,8 @@ export default class Signup extends React.Component {
 	}
 
   render() {
-		// console.log('this is props', this.props)
+		console.log('this is props', this.props)
+		console.log(this.onSubmit)
     return (
       <div>
         <div className="component-container">

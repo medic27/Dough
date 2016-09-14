@@ -4,6 +4,7 @@ import Pie from './category_pie'
 import TimeChart from './time_chart'
 import ProgressBar from './progress_bar'
 import Expense from './expense'
+import Profile from './profile'
 import Nav from './nav'
 import {Router, Route, Link} from 'react-router'
 
@@ -24,7 +25,10 @@ export default class DashBoard extends React.Component {
           <Pie />
           <TimeChart />
         </div>
+        <Expense/>
+        <Profile/>
       </div>
     )
   }
 }
+
