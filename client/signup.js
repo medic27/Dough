@@ -11,6 +11,7 @@ export default class Signup extends React.Component {
 	}
 
 	onSubmit(evt) {
+
 		evt.preventDefault();
 		console.log('SUBMITTED SIGNUP EVENT')
 		// this.props.changeUserInfo(evt.target.elements[0].value, evt.target.elements[1].value)

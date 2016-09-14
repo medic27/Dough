@@ -11,9 +11,12 @@ import Nav from './client/nav';
 import theirApp from './theirApp';
 import Expense from './client/expense'
 import Home from './client/home'
+import Goal from './client/goals'
 
 
 
+
+<<<<<<< HEAD
 // ReactDOM.render((
 //   <Provider store={store}>
 //     <Router history={browserHistory}>
@@ -28,3 +31,4 @@ import Home from './client/home'
 //     </Router>
 //   </Provider>
 // ), document.getElementById('content'));
+>>>>>>> master

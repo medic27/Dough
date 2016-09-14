@@ -6,9 +6,11 @@ import Login from './login'
 import Signup from './signup'
 import Profile from './profile'
 import Nav from './nav';
+
 import Expense from './expense'
 import Home from './home'
 
+import Goals from './goals';
 
 
 class App extends React.Component {
