@@ -219,3 +219,20 @@ video {
   position: fixed;
   top: 0;
 }
+
+#expenseInput {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  /*width: 600px;*/
+}
+
+#singleExpense {
+  border: 1px solid black;
+  flex-grow: 1;
+}
+
+#recurExpense {
+  border: 1px solid black;
+  flex-grow: 1;
+}

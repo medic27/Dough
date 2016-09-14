@@ -4,19 +4,37 @@ import {Router, Route, Link} from 'react-router'
 import $ from 'jquery';
 
 export default class Expense extends React.Component {
+	refreshData() {
+    const username = JSON.parse(localStorage.getItem('user')).username;
+    $.ajax({
+      type: 'GET',
+      url: 'http://localhost:3000/api/user/' + username + '/expense'
+    })
+    .done(function(data) {
+      document.getElementById('expenses-list').innerHTML = '';
+      data.forEach((exp) => {
+        if(exp.recurring === false) {
+          let listElem = document.createElement('div');
+          listElem.innerHTML = exp.category + '  $' + exp.amount;
+          document.getElementById('expenses-list').appendChild(listElem);
+        }
+      })
+    })    
+  }
 
   submit(e) {
     e.preventDefault();
+
     const amount = e.target.elements[0].value;
     const category = e.target.elements[1].value;
     // const username = this.props.username;
     const username = JSON.parse(localStorage.getItem("user")).username;
-    console.log(username)
 
     const expenseData = {
     	amount: amount,
     	category: category,
-    	username: username
+    	username: username,
+			recurring: false
     }
 
 		$.ajax({
@@ -31,16 +49,26 @@ export default class Expense extends React.Component {
 	    	url: 'http://localhost:3000/api/user/' + username + '/expense'
 	    })
 	    .done(function(data) {
-	    	console.log('expenses got', data)
-	    	localStorage.setItem("expenses", JSON.stringify(data));
-	    	console.log('local storage', localStorage.getItem("expenses"))
-	    })
+				document.getElementById('expenses-list').innerHTML = '';
+        data.forEach((exp) => {
+          if(exp.recurring === false) {
+            let listElem = document.createElement('div');
+            listElem.innerHTML = exp.category + '  $' + exp.amount;
+            document.getElementById('expenses-list').appendChild(listElem);
+          }
+        })
+        localStorage.setItem("expenses", JSON.stringify(data));
+      }) 
 	  });
+
+    //resets field
+    e.target.elements[0].value = "";
   }
 
   render() {
+		this.refreshData();
     return (
-    	<div>
+    	<div id='singleExpense'>
     		<h1>Add Expense</h1>
     		<form onSubmit={this.submit}>
     			<input placeholder="Enter amount" />
@@ -52,6 +80,8 @@ export default class Expense extends React.Component {
 					</select>
 					<button type="submit" className="submit-button">Submit</button>
     		</form>
+				<div id='expenses-list'>
+				</div>
     	</div>
     )
   }
