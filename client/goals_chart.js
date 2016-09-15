@@ -49,7 +49,6 @@ export default class GoalChart extends React.Component {
   }
 }
 
-// export default class TimeChart extends React.Component {
 
 
 //   render() {
