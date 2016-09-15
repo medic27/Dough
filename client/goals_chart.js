@@ -6,13 +6,18 @@ export default class GoalChart extends React.Component {
 
   render() {
     //data goes here
-    let testExpenses = JSON.parse(localStorage.getItem("expenses"));
-    let expenses = testExpenses.reduce( (a, b)=> {
+    let localExpenses = JSON.parse(localStorage.getItem("expenses"));
+    let expenses = localExpenses.reduce( (a, b)=> {
       return Number(a.amount) + Number(b.amount);
     });
-    
-    // let income = JSON.parse(localStorage.getItem("user").income);
-    console.log("inside goalChart", expenses);
+    let income = parseInt(JSON.parse(localStorage.getItem("user")).income);
+    let goal = JSON.parse(localStorage.getItem("goals"));
+    goal = parseInt(goal[goal.length-1].amount);
+
+    console.log("expenses", expenses);
+    console.log("income", income)
+    console.log("goal", goal);
+
     return (
       <div className="goalChart">
         <h1>Goal Chart</h1>
@@ -24,16 +29,16 @@ export default class GoalChart extends React.Component {
           >
             <VictoryArea
               data={[
-                {x: 100, y: 100},
-                {x: 200, y: 200},
-                {x: 300, y: 300}
+                {x: 1, y: goal},
+                {x: 2, y: goal},
+                {x: 3, y: goal}
               ]}
             />
             <VictoryArea
               data={[
-                {x: 100, y: 300},
-                {x: 200, y: 400},
-                {x: 300, y: 200}
+                {x: 1, y: 6000},
+                {x: 2, y: 7000},
+                {x: 3, y: 8000}
               ]}
             />
           </VictoryGroup>
