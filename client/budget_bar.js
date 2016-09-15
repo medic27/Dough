@@ -18,6 +18,7 @@ export default class BudgetBar extends React.Component {
     let totalExp = totalExpense(testExpenses)
 
     let budget = JSON.parse(localStorage.getItem("goals"));
+    console.log(budget)
     budget = parseInt(budget[budget.length-1].budget);
 
     // console.log('budget', typeof budget)

@@ -4,6 +4,7 @@ const User = require('../models/user');
 const expenses = require('../models/expenses');
 
 function signup(req, res) {
+	console.log("hit signup route")
 	User.create({
 		email: req.body.email,
 		username: req.body.username,

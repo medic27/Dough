@@ -61,13 +61,13 @@ export default class Goal extends React.Component {
 						<option value="other">Other</option>
 					</select>
 
-
 					<button type="submit" className="submit-button">Submit</button>
 				</form>
 				<h2>Budget Progress</h2>
 				<BudgetBar />
-				<GoalChart />
 			</div>
     )
   }
 }
+
+				// <GoalChart />

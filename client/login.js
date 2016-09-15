@@ -7,9 +7,9 @@ import $ from 'jquery';
 export default class Login extends React.Component {
 
   onSubmit(evt) {
-    var self
+    // var self
     evt.preventDefault()
-    self = this
+    // self = this
     const userName = evt.target.elements[0].value
     const password = evt.target.elements[1].value
 
@@ -17,6 +17,8 @@ export default class Login extends React.Component {
       username: userName,
       password: password
     }
+
+    
     if (value) {
       console.log(value)
     }
@@ -62,7 +64,7 @@ export default class Login extends React.Component {
     return (
       <div>
         <h1>Login</h1>
-        <form onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmit.bind(this)}>
           <input type="text" placeholder="username"/> {' '}
           <input type="password" placeholder="password"/>{' '}
           <button type="submit" className="submit-button">Submit</button>

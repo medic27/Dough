@@ -11,10 +11,12 @@ export default class Signup extends React.Component {
 	}
 
 	onSubmit(evt) {
-
 		evt.preventDefault();
 		console.log('SUBMITTED SIGNUP EVENT')
 		// this.props.changeUserInfo(evt.target.elements[0].value, evt.target.elements[1].value)
+
+
+
 		const self = this;
 
 
@@ -24,6 +26,32 @@ export default class Signup extends React.Component {
 		const confirmPassword = evt.target.elements[3].value;
 		const income = evt.target.elements[4].value;
 		let signupData = {};
+
+		const emptyExpenseData = {
+			amount: 0,
+			category: 'food',
+			username: username,
+			recurring: false
+		}
+
+		const emptyGoalsData = {
+			budget: 0,
+			amount: 0,
+			description:'poop',
+			date: new Date(),
+			category: 'food',
+			username: username
+		}
+
+		var emptyGoalsDataArray = []
+		emptyGoalsDataArray.push(emptyGoalsData)
+
+		console.log("emptyGoalsData", emptyGoalsData)
+
+		localStorage.setItem("expenses", JSON.stringify(emptyExpenseData))
+		localStorage.setItem("goals", JSON.stringify(emptyGoalsDataArray))
+
+
 
 		if(password !== confirmPassword) {
 			console.log('passwords dont match', password, confirmPassword)
@@ -59,8 +87,8 @@ export default class Signup extends React.Component {
 	}
 
   render() {
-		console.log('this is props', this.props)
-		console.log(this.onSubmit)
+		// console.log('this is props', this.props)
+		// console.log(this.onSubmit)
     return (
       <div>
         <div className="component-container">
