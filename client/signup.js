@@ -74,7 +74,8 @@ export default class Signup extends React.Component {
 				    data : signupData,
 				    success: function(data, textStatus, jqXHR)
 				    {
-				      localStorage.setItem("user", stringData);
+							// SET USER DATA TO LOCAL STORAGE
+				      localStorage.setItem("user", stringData);        
 							const path = `/dashboard`
 							browserHistory.push(path)
 				    },
@@ -87,8 +88,6 @@ export default class Signup extends React.Component {
 	}
 
   render() {
-		// console.log('this is props', this.props)
-		// console.log(this.onSubmit)
     return (
       <div>
         <div className="component-container">
