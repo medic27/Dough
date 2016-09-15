@@ -15,15 +15,17 @@ export default class DashBoard extends React.Component {
   render() {
 
     let user = JSON.parse(localStorage.getItem("user")).username;
+    user = user[0].toUpperCase() + user.substring(1)
+    
     return (
       <div>
-        <h2>{user} Dashboard</h2>
+        <h2>{user}'s Expense Dashboard</h2>
         <h3 className="expenses">Expenses vs. Income</h3>
-        <ProgressBar />
+                <ProgressBar />
         <h3 className="expenses">Recent Expenses Breakdown</h3>
         <div className="flex">
+         <TimeChart />
           <Pie />
-          <TimeChart />
         </div>
         <div id='expenseInput'>
           <Expense/>
@@ -33,4 +35,4 @@ export default class DashBoard extends React.Component {
     )
   }
 }
-
+    
