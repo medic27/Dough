@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, Link} from 'react-router';
-import BudgetBar from './budget_bar'
+import BudgetBar from './budget_bar';
+import GoalChart from './goals_chart';
 
 import $ from 'jquery';
 
@@ -65,6 +66,7 @@ export default class Goal extends React.Component {
 				</form>
 				<h2>Budget Progress</h2>
 				<BudgetBar />
+				<GoalChart />
 			</div>
     )
   }
