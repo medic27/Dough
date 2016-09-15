@@ -65,9 +65,10 @@ export default class Goal extends React.Component {
 				</form>
 				<h2>Budget Progress</h2>
 				<BudgetBar />
+				 <GoalChart />
 			</div>
     )
   }
 }
 
-				// <GoalChart />
+				//

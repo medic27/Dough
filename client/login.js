@@ -7,9 +7,7 @@ import $ from 'jquery';
 export default class Login extends React.Component {
 
   onSubmit(evt) {
-    // var self
     evt.preventDefault()
-    // self = this
     const userName = evt.target.elements[0].value
     const password = evt.target.elements[1].value
 
@@ -18,10 +16,10 @@ export default class Login extends React.Component {
       password: password
     }
 
-    
     if (value) {
       console.log(value)
     }
+
     let stringData = JSON.stringify({username: userName});
 
     $.ajax({
@@ -46,7 +44,6 @@ export default class Login extends React.Component {
                 console.log('no bueno');
               }
           }).then( function() {
-
             const path = `/dashboard/`
             browserHistory.push(path)
           })
