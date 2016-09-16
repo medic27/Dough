@@ -4,8 +4,9 @@ import Pie from './category_pie'
 import TimeChart from './time_chart'
 import ProgressBar from './progress_bar'
 import Expense from './expense'
-import Profile from './profile'
+import Profile from './profile' 
 import Nav from './nav'
+import UpdateIncome from './updateIncome'
 import {Router, Route, Link} from 'react-router'
 
 export default class DashBoard extends React.Component {
@@ -24,6 +25,9 @@ export default class DashBoard extends React.Component {
         <div className="flex">
           <Pie />
           <TimeChart />
+        </div>
+        <div>
+        <UpdateIncome/>
         </div>
         <div id='expenseInput'>
           <Expense/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, Link} from 'react-router'
+import {Router, Route, Link, browserHistory} from 'react-router'
 import $ from 'jquery';
 
 export default class Expense extends React.Component {
@@ -63,9 +63,11 @@ export default class Expense extends React.Component {
 
     //resets field
     e.target.elements[0].value = "";
+    browserHistory.push('/dashboard');
   }
 
   render() {
+    console.log('render ran');
 		this.refreshData();
     return (
     	<div id='singleExpense'>

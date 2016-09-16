@@ -44,6 +44,11 @@ app.post('/api/user/:username/expense', expenseCtrl.create);
 app.get('/api/user/:username/goals', goalsCtrl.getGoal);
 app.post('/api/user/:username/goals', goalsCtrl.makeGoal);
 
+// update user data
+app.put('/api/user/:username/income', function(req, res) {
+  console.log(req.params.username);
+});
+
 passport.serializeUser(function(user, done) {
   done(null, user);
 });

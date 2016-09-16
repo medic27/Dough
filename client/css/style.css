@@ -162,10 +162,17 @@ fieldset {
 .home-buttons {
   display: inline-block;
 }
+
+.home-buttons div {
+  padding: 10px;
+  margin-bottom: 10px;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 3px;
+}
 .home-box {
   position: relative;
   margin: 0 auto;
-  padding-top: 20px;
   width: 800px;
   height: 200px;
 }
@@ -196,9 +203,9 @@ fieldset {
   margin: 10px;
 }
 
-.home-main button:hover {
-  background-color: #000;
-  color: #fff;
+.home-buttons div:hover {
+  background-color: #222;
+  color: #eee;
 }
 
 /* Background */

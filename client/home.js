@@ -14,11 +14,22 @@ class Home extends React.Component {
         <source src="./client/coutingmoney.mp4" type="video/mp4" />
       </video>
         <div className="home-box">
-          <h1>Bred</h1>
-          <h4>Where your finances come together</h4>
+          <h1>Dough!</h1>
+          <h4>Where you track your dough</h4>
           <div className="home-buttons">
-            <button className="signup"><Link to="/signup">Signup Today</Link></button>
-            <button className="login"><Link to="/login">Login</Link></button>
+            <Link to="/signup">
+            <div>
+
+              Signup Today
+
+            </div></Link>
+            <Link to="/login">
+            <div>
+
+              Login
+
+            </div>
+            </Link>
           </div>
         </div>
       </section>
