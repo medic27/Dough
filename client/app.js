@@ -6,12 +6,10 @@ import Login from './login'
 import Signup from './signup'
 import Profile from './profile'
 import Nav from './nav';
-
 import Expense from './expense'
 import Home from './home'
-
 import Goals from './goals';
-
+import UpdateIncome from './updateIncome';
 
 class App extends React.Component {
   constructor() {
@@ -37,6 +35,7 @@ ReactDOM.render((
       <Route path="/home" component={Home} />
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
+      <Route path="/updateIncome" component={UpdateIncome} />
       <Route path="/profile" component={Profile} />
       <Route path="/expense" component={Expense} />
       <Route path="/goals" component={Goals} />
