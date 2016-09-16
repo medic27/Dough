@@ -7,6 +7,7 @@ export default class TimeChart extends React.Component {
 
 
   render() {
+    console.log('rendering time chart');
       let cats =[];
       let dataPoints = []
         let testExpenses = JSON.parse(localStorage.getItem("expenses"));

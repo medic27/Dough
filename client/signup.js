@@ -13,11 +13,7 @@ export default class Signup extends React.Component {
 	onSubmit(evt) {
 		evt.preventDefault();
 		// this.props.changeUserInfo(evt.target.elements[0].value, evt.target.elements[1].value)
-
-
-
 		const self = this;
-
 
 		const username = evt.target.elements[0].value;
 		const email = evt.target.elements[1].value;

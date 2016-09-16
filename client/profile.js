@@ -60,12 +60,12 @@ export default class Profile extends React.Component {
           }
         })
         localStorage.setItem("expenses", JSON.stringify(data));
+        browserHistory.push('/dashboard');
       }) 
 	  });
 
     //resets field
     e.target.elements[0].value = "";
-    browserHistory.push('/dashboard');
   }
 
   render() {

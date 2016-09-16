@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, Link} from 'react-router';
+import {Router, Route, Link, browserHistory} from 'react-router';
 import BudgetBar from './budget_bar';
 import GoalChart from './goals_chart';
+
 
 import $ from 'jquery';
 
@@ -37,6 +38,7 @@ export default class Goal extends React.Component {
 						console.log('goals got', data)
 						localStorage.setItem("goals", JSON.stringify(data));
 						console.log('local storage', localStorage.getItem("goals"))
+						browserHistory.push('/goals');
 					})
 			});
   }
